@@ -1,0 +1,45 @@
+Spring Boot JWT Authentication with Role Based Access.
+
+1. Signup and Login using email/mobile and password.
+2. Token-based acess using JWT.
+3. Role Based authorization (USER, MERCHANT, ADMIN).
+
+Roles:
+1. User - Default after signup.
+2.Merchant- Assigned automatically after signup.
+3. ADMIN- Default admin and can manage other users.
+
+Features:
+1.Signup has Public access with POST Method. (/auth/signup)
+2. Login has public access with POST Method.(/auth/login)
+3. View all users has admin acess only with GET Method(/admin/users)
+
+Folder Structure:
+controller/
+    AuthController.java
+    AdminController.java
+
+model/
+    User.java
+
+dto/
+    LoginRequest.java
+    SignupRequest.java
+    RoleChangeRequest.java
+
+repository/
+    UserRepository.java
+
+service/
+    JwtService.java
+   JwtAuthFilter,java
+  CustomerUserDetails
+
+config/
+  SecurityConfig.java
+
+Main/
+JwtprojectApplication.java
+
+		
+
